@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>example</title>
+    </head>
+
+    <body>
+        <form action="">
+            <fieldset>
+
+                <legend>인적 사항</legend>
+
+                <!--이름-->
+                <label for="name">이름</label>
+                <input type="text" id="name" required autofocus>
+
+                <br>
+
+                <!--학년, 라디오 버튼-->
+                <label>학년
+                    <input type="radio" name="grade" value="1" id="1G" checked>
+                    <label for="1G">1학년</label>
+
+                    <input type="radio" name="grade" value="2" id="2G">
+                    <label for="2G">2학년</label>
+
+                    <input type="radio" name="grade" value="3" id="3G">
+                    <label for="3G">3학년</label>
+                </label>
+
+                <br>
+
+                <!--생년월일-->
+                <label for="age">나이</label>
+                <input type="number" id="age" min="17" max="20">
+            </fieldset>
+
+            <fieldset>
+
+                <legend>좋아하는 음식</legend>
+
+                <!--체크 박스-->
+                <input type="checkbox" name="food" id="1" value="1">
+                <label for="1">돈까스 김밥</label>
+
+                <input type="checkbox" name="food" id="2" value="2">
+                <label for="2">김밥</label>
+
+                <input type="checkbox" name="food" id="3" value="3">
+                <label for="3">치즈 김밥</label>
+
+                <input type="checkbox" name="food" id="4" value="4">
+                <label for="4">참치 김밥</label>
+
+                <!--드롭 박스-->
+                <select name="food2">
+                    <option value="1">물</option>
+                    <option value="2">과일음료</option>
+                    <option value="3">탄산음료</option>
+                    <option value="4">해당없음</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                
+                <legend>학과</legend>
+                <input type="text" value="스마트소프트웨어" readonly>
+
+                <br>
+
+                <textarea cols="30" rows="5" placeholder="학과소개"></textarea>
+            </fieldset>
+
+            <input type="submit">
+            <input type="reset">
+        </form>
+    </body>
+</html>
