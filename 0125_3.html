@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&family=Nanum+Pen+Script&display=swap');
+            sup {
+                color: red;
+            }
+
+            table {
+                font-family: 'Hi Melody', cursive;
+                border-collapse: collapse;
+                border: 1px;
+            }
+
+            th {
+                border: 1px blueviolet dashed;
+            }
+
+            td {
+                border: 1px lightseagreen dotted;
+            }
+
+            input:disabled {
+                background-color: lightpink;
+            }
+            
+            input:checked + label {
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>회원가입을 환영합니다</h2>
+
+        <!--입력 양식-->
+        <form action="">
+            <fieldset>
+                <legend>사용자 정보</legend>
+
+                <table>
+                    <tr>
+                        <td rowspan="5">
+                            <img src="image2.png" alt="인물" width="100" height="100">
+                        </td>
+                        <th>이름<sup>*</sup></th>
+                        <td>
+                            <input type="text" maxlength="5" autofocus required>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>생년월일<sup>*</sup></th>
+                        <td>
+                            <input type="date" required>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>이메일<sup>*</sup></th>
+                        <td>
+                            <input type="email" required>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>비밀번호<sup>*</sup></th>
+                        <td>
+                            <input type="password" required>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>학교</th>
+                        <td>
+                            <input type="text" value="상일미디어고등학교" disabled>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>학년</th>
+                        <td colspan="2">
+                            <select name="grade" id="grade">
+                            <option value="1">선택안함</option>
+                            <option value="2">1학년</option>
+                            <option value="3">2학년</option>
+                            <option value="4">3학년</option>
+                            <option value="5">졸업생</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset>
+                <legend>이벤트와 새로운 소식</legend>
+                <input type="radio" name="event" value="ok" id="ok">
+                <label for="ok">메일 수신</label>
+
+                <input type="radio" name="event" value="no" id="no" checked>
+                <label for="no">메일 수신 안함</label>
+            </fieldset>
+
+            <input type="submit" value="가입하기">
+            <input type="reset" value="취소">
+        </form>
+    </body>
+</html>
